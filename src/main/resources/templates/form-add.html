@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"><!--//подключаем шаблонизатор thymeleaf-->
+<head>
+    <title>Добавление статьи</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div th:insert="blocks/menu :: menu" ></div>
+<main role="main mt-5">
+    <div class="container">
+        <h1 class="text-center">Внесение информации</h1>
+        <form action="/form/add" method="post" >
+            <input type="number" name="incoming" placeholder="Заработанные деньги" class="form-control form-control-lg">
+            <br>
+            <input type="number" name="cost" placeholder="Потраченные деньги" class="form-control form-control-lg"><br>
+            <button type="submit" class="btn btn-outline-primary">Записать</button>
+            <!-- submit говороит о том, что страница при нажатии кнопки будет загружиться и данные отправлются на сервер-->
+        </form>
+    </div>
+</main>
+
+</body>
+</html>

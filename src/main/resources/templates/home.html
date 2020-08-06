@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"><!--//подключаем шаблонизатор thymeleaf-->
+<head>
+    <title th:text="${title}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div th:insert="blocks/menu :: menu" ></div>
+<main role="main">
+<div class="container" style="weight:800 px; height: 100px; position: absolute; top: 0; bottom: 100px; left: 0; right: 0; margin: auto;">
+    <section class="jumbotron text-center">
+        <div class="container">
+
+            <h1>Приложение для учёта финансов</h1>
+            <p class="lead text-muted">Здесть ты сможешь конролировать свои доходы и расходы</p>
+
+            <p>
+                <a href="/form/add" class="btn btn-primary my-2">Добавить</a>
+                <a href="/statistics" class="btn btn-secondary my-2">Статистика</a>
+            </p>
+
+
+        </div>
+    </section>
+
+</div>
+</main>
+
+</body>
+</html>
